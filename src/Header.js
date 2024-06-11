@@ -1,8 +1,16 @@
-import React from "react";
+import React from 'react';
 
 
 export function Header(props) {
-    const clock = Date().toLocaleString();
+    let [clock, setClock] = React.useState(Date().toLocaleString());
+
+    console.log(clock);
+
+    setInterval(() => {
+      setClock(Date().toLocaleString());
+    }, 1000);
+
+    console.log('Header executed');
   
     return (
       <h1 className="orange">

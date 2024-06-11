@@ -6,6 +6,4 @@ import './style.css';
 const rootEl = document.querySelector('#root');
 const root = ReactDOM.createRoot(rootEl);
 
-setInterval(function () {
-  root.render(<Page />);
-});
+root.render(<Page />);
